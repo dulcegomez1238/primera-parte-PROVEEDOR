@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h3 class="text-danger">¿Deseas borrar al proveedor "{{ proveedor.nombre }}"?</h3>
+<form method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger">Sí, borrar</button>
+    <a href="{% url 'ver_proveedor' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

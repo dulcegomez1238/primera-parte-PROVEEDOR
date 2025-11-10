@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="{% url 'inicio_Farmacia' %}">
+        <i class="bi bi-capsule"></i> Sistema de Administración Farmacia
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarFarmacia">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarFarmacia">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="{% url 'inicio_Farmacia' %}"><i class="bi bi-house"></i> Inicio</a></li>
+
+        <!-- Proveedor -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            <i class="bi bi-person-badge"></i> Proveedor
+            </a>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'agregar_proveedor' %}">Agregar proveedor</a></li>
+            <li><a class="dropdown-item" href="{% url 'ver_proveedor' %}">Ver proveedores</a></li>
+            </ul>
+        </li>
+        <!-- Producto -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            <i class="bi bi-box"></i> Producto
+            </a>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Agregar producto</a></li>
+            <li><a class="dropdown-item" href="#">Ver producto</a></li>
+            </ul>
+        </li>
+        <!-- Inventario -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            <i class="bi bi-archive"></i> Inventario
+            </a>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Agregar inventario</a></li>
+            <li><a class="dropdown-item" href="#">Ver inventario</a></li>
+            </ul>
+        </li>
+        </ul>
+    </div>
+    </div>
+</nav>

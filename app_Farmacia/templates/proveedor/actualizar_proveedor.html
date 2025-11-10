@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<h2 class="text-warning mb-3">Actualizar Proveedor</h2>
+<form method="POST" class="card p-4 shadow">
+    {% csrf_token %}
+    <input type="text" name="nombre" value="{{ proveedor.nombre }}" class="form-control mb-3" placeholder="Nombre">
+    <input type="text" name="direccion" value="{{ proveedor.direccion }}" class="form-control mb-3" placeholder="Dirección">
+    <input type="text" name="telefono" value="{{ proveedor.telefono }}" class="form-control mb-3" placeholder="Teléfono">
+    <input type="email" name="correo" value="{{ proveedor.correo_electronico }}" class="form-control mb-3" placeholder="Correo electrónico">
+    <input type="text" name="tipo_producto" value="{{ proveedor.tipo_producto }}" class="form-control mb-3" placeholder="Tipo de producto">
+    <button class="btn btn-warning">Actualizar</button>
+    <a href="{% url 'ver_proveedor' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
